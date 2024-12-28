@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/static/file.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="title" placeholder="New task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul>
+            {{range .}}
+            <li>
+                <span class="{{if eq .Status "Completed"}}completed{{else}}pending{{end}}">
+                    {{.Title}} - {{if eq .Status "Completed"}}✔️ Completed{{else}}Pending{{end}}
+                </span>
+                <div class="button-container">
+                    <form action="/complete" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="{{.ID}}">
+                        <button type="submit" class="complete-btn">
+                            {{if eq .Status "Completed"}} Completed{{else}}Complete{{end}}
+                        </button>
+                    </form>
+                    <form action="/delete" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="{{.ID}}">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </div>
+            </li>
+            {{end}}
+        </ul>
+    </div>
+</body>
+</html>
