@@ -14,11 +14,6 @@ Terraform: Infrastructure as Code (IaC) to manage Docker resources.
 <img width="735" alt="Screenshot 2024-12-28 at 13 04 48" src="https://github.com/user-attachments/assets/7bd59b9e-4759-45c1-ab56-2b1df5e61e47" />
 
 
-├── main.go          # Go application source code
-├── go.mod           # Go module dependencies
-├── Dockerfile       # Dockerfile for containerizing the app
-├── main.tf          # Terraform configuration
-├── README.md        # Project documentation
 🖥️ Application Preview
 A simple To-Do List app where users can add, view, and manage tasks.
 
