@@ -11,11 +11,13 @@ Go (Golang): Backend logic for the To-Do List app.
 Docker: Containerization of the application.
 Terraform: Infrastructure as Code (IaC) to manage Docker resources.
 📂 Project Structure
-<img width="735" alt="Screenshot 2024-12-28 at 13 04 48" src="https://github.com/user-attachments/assets/7bd59b9e-4759-45c1-ab56-2b1df5e61e47" />
+<img width="1433" alt="Screenshot 2024-12-28 at 13 47 30" src="https://github.com/user-attachments/assets/7ddf6f2a-7ce9-48f4-b9fb-ddbb711cc905" />
 
 
 🖥️ Application Preview
 A simple To-Do List app where users can add, view, and manage tasks.
+![screenr-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/652add85-afc3-4b13-b9fd-8e438ac06b39)
+
 
 ## Build and Run with Terraform
 Initialize Terraform:
