@@ -1,73 +1,38 @@
-To-Do List
-A simple and efficient web application to manage your tasks and keep track of your daily to-dos. The application allows users to add, update, and remove tasks easily. You can also mark tasks as complete or pending based on their progress.
+To-Do List Application with Docker and Terraform
+This repository contains a simple To-Do List application implemented in Go and containerized using Docker. The application is deployed and managed using Terraform for automation and infrastructure provisioning.
 
-Features
-Add Tasks: Add new tasks to your to-do list with a title and description.
-Edit Tasks: Update the details of existing tasks.
-Mark as Completed: Track the progress by marking tasks as completed.
-Delete Tasks: Remove tasks when they are no longer needed.
-Filter Tasks: Filter tasks by status (completed/pending).
-Responsive UI: Works well on all screen sizes, including mobile devices.
-Technologies Used
-Frontend: HTML, CSS, JavaScript
-Backend: Go (Golang)
-Deployment: Docker (for containerization) & Kubernetes (for deployment)
-Installation
-Prerequisites
-Make sure you have the following installed:
-
-Go (>=1.18)
-Docker (for containerization)
-Kubernetes (for deployment)
-Steps to Run the Application
-Clone the repository:
+🚀 Features
+A lightweight Go-based To-Do List web application.
+Fully containerized using Docker.
+Automated deployment using Terraform.
+Accessible via http://localhost:5000.
+🛠️ Technologies Used
+Go (Golang): Backend logic for the To-Do List app.
+Docker: Containerization of the application.
+Terraform: Infrastructure as Code (IaC) to manage Docker resources.
+📂 Project Structure
+<img width="735" alt="Screenshot 2024-12-28 at 13 04 48" src="https://github.com/user-attachments/assets/7bd59b9e-4759-45c1-ab56-2b1df5e61e47" />
 
 
-git clone https://github.com/ambatibhargavi/todo-list.git
-cd todo-list
-Install dependencies:
+├── main.go          # Go application source code
+├── go.mod           # Go module dependencies
+├── Dockerfile       # Dockerfile for containerizing the app
+├── main.tf          # Terraform configuration
+├── README.md        # Project documentation
+🖥️ Application Preview
+A simple To-Do List app where users can add, view, and manage tasks.
 
-Go doesn’t have a formal package manager, but you can use go mod to manage dependencies. Ensure the Go modules are set up:
+## Build and Run with Terraform
+Initialize Terraform:
+Access the application at http://localhost:5000.
 
-bash
-Copy code
-go mod tidy
-Run the application locally:
-go run main.go
-Access the application:
+🐳 Docker Details
+Dockerfile
+The Dockerfile is used to build the Go application into a Docker image
+terraform destroy
 
-Open your browser and go to http://localhost:5000/
-Docker Setup
-To run the application in a container:
-
-Create a Dockerfile :
-Build the Docker image:
-
-docker build -t todo-list .
-Run the Docker container:
-
-
-docker run -p 8080:8080 todo-list
-Access the app:
-
-Open your browser and go to http://localhost:8080/.
-
-Deployment on Kubernetes
-Build and push the Docker image to a container registry (e.g., Docker Hub).
-
-Create Kubernetes deployment and service files (deployment.yaml, service.yaml).
-
-Apply the Kubernetes configurations:
-
-kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
-Access the application:
-
-Use the appropriate method (e.g., kubectl port-forward) to expose the app.
-
-Usage
-After launching the app, users can:
-Add new tasks by entering a task name and description.
-Mark tasks as completed by clicking on a checkbox.
-Delete tasks by clicking the delete icon.
-Filter tasks based on their completion status (Completed/Pending).
+<img width="1296" alt="Screenshot 2024-12-28 at 12 04 32" src="https://github.com/user-attachments/assets/fbf00dc4-27b6-4a71-b2c9-d679616818e1"/>
+<img width="348" alt="Screenshot 2024-12-28 at 12 04 17" src="https://github.com/user-attachments/assets/e5d72a32-d0ea-493c-bd67-e1863642ce4d" />
+<img width="630" alt="Screenshot 2024-12-28 at 12 03 43" src="https://github.com/user-attachments/assets/429d43e3-a464-486b-a2bc-77c7b0c7dc31" />
+<img width="611" alt="Screenshot 2024-12-28 at 09 30 44" src="https://github.com/user-attachments/assets/82541b48-04df-460f-9070-cd3b7cafcf65" />
+<img width="917" alt="Screenshot 2024-12-28 at 09 30 28" src="https://github.com/user-attachments/assets/bc67ba59-26d9-4716-99ce-6a30a516d5df" />
